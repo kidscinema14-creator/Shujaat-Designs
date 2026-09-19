@@ -1,0 +1,142 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "Demo website showcase project item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "tagline": { "type": "string" },
+        "description": { "type": "string" },
+        "features": { "type": "array" },
+        "techStack": { "type": "array" },
+        "desktopImage": { "type": "string" },
+        "mobileImage": { "type": "string" },
+        "demoUrl": { "type": "string" },
+        "priceStartingFrom": { "type": "string" },
+        "deliveryDays": { "type": "string" },
+        "featured": { "type": "boolean" },
+        "published": { "type": "boolean" },
+        "displayOrder": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "category"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Agency service offerings and packages",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "shortDescription": { "type": "string" },
+        "fullDescription": { "type": "string" },
+        "icon": { "type": "string" },
+        "deliverables": { "type": "array" },
+        "startingPrice": { "type": "string" },
+        "turnaround": { "type": "string" },
+        "published": { "type": "boolean" },
+        "displayOrder": { "type": "number" }
+      },
+      "required": ["id", "title"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Client feedback and testimonial reviews",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "clientName": { "type": "string" },
+        "clientBusiness": { "type": "string" },
+        "clientRole": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "published": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "clientName", "rating", "comment"]
+    },
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "Client contact and project inquiries",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "businessName": { "type": "string" },
+        "mobile": { "type": "string" },
+        "email": { "type": "string" },
+        "category": { "type": "string" },
+        "interestedProject": { "type": "string" },
+        "requirements": { "type": "string" },
+        "date": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "status": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "name", "mobile", "requirements", "date", "status"]
+    },
+    "Setting": {
+      "title": "Setting",
+      "description": "Agency website configuration and contact settings",
+      "type": "object",
+      "properties": {
+        "businessName": { "type": "string" },
+        "whatsappNumber": { "type": "string" },
+        "callNumber": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" },
+        "heroTitle": { "type": "string" },
+        "heroSubtitle": { "type": "string" },
+        "maintenanceMode": { "type": "boolean" },
+        "developerNotes": { "type": "string" },
+        "socialLinks": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["businessName", "whatsappNumber", "callNumber", "email"]
+    },
+    "SystemLog": {
+      "title": "SystemLog",
+      "description": "Internal technical and system event audit logs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "level": { "type": "string" },
+        "module": { "type": "string" },
+        "message": { "type": "string" }
+      },
+      "required": ["id", "timestamp", "level", "message"]
+    }
+  },
+  "firestore": {
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Collection of demo websites displayed on the portfolio showcase"
+    },
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Collection of web design agency services"
+    },
+    "/testimonials/{testimonialId}": {
+      "schema": "Testimonial",
+      "description": "Collection of client ratings and reviews"
+    },
+    "/settings/{settingId}": {
+      "schema": "Setting",
+      "description": "Global website configuration and contact settings"
+    },
+    "/inquiries/{inquiryId}": {
+      "schema": "Inquiry",
+      "description": "Client lead inquiries submitted through contact form"
+    },
+    "/system_logs/{logId}": {
+      "schema": "SystemLog",
+      "description": "System event audit trail"
+    }
+  }
+}

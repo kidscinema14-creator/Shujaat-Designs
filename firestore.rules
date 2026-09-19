@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Projects showcase: read and write for portfolio display and manager updates
+    match /projects/{projectId} {
+      allow read, write: if true;
+    }
+    // Services offerings: read and write for agency offerings and manager updates
+    match /services/{serviceId} {
+      allow read, write: if true;
+    }
+    // Client testimonials: read and write
+    match /testimonials/{testimonialId} {
+      allow read, write: if true;
+    }
+    // Website settings and contact info
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+    // Client inquiries: read, create, update, delete for lead capture and desk management
+    match /inquiries/{inquiryId} {
+      allow read, write: if true;
+    }
+    // Desk users collection
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+    // System telemetry logs
+    match /system_logs/{logId} {
+      allow read, write: if true;
+    }
+  }
+}
