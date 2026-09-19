@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { WebsiteSettings } from '../types';
 import { createWhatsAppLink, getGeneralWhatsAppMessage } from '../utils/whatsapp';
+import { SHUJAAT_LOGO_URL } from '../assets/logo';
 
 interface NavbarProps {
   settings: WebsiteSettings;
@@ -63,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ settings, onOpenInquiry, onNavig
             className="flex items-center gap-3 cursor-pointer group"
           >
             <img 
-              src="/shujaat-logo.png" 
+              src={SHUJAAT_LOGO_URL} 
               alt={`${settings.businessName} Logo`}
               className="w-11 h-11 rounded-xl object-contain shadow-sm border border-slate-200 bg-slate-950 p-0.5 group-hover:scale-105 transition-transform duration-200"
             />

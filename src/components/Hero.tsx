@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { WebsiteSettings } from '../types';
 import { createWhatsAppLink, getGeneralWhatsAppMessage } from '../utils/whatsapp';
+import { SHUJAAT_LOGO_URL } from '../assets/logo';
 
 interface HeroProps {
   settings: WebsiteSettings;
@@ -43,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Trust Badge with Logo */}
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-slate-200/90 text-xs font-semibold text-slate-800 mb-8 shadow-xs">
             <img 
-              src="/shujaat-logo.png" 
+              src={SHUJAAT_LOGO_URL} 
               alt="Shujaat Designs" 
               className="w-5 h-5 rounded-md object-contain bg-slate-950 p-0.5" 
             />

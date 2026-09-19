@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { WebsiteSettings } from '../types';
 import { createWhatsAppLink, getGeneralWhatsAppMessage } from '../utils/whatsapp';
+import { SHUJAAT_LOGO_URL } from '../assets/logo';
 
 interface FooterProps {
   settings: WebsiteSettings;
@@ -41,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({
               className="flex items-center gap-3 cursor-pointer group"
             >
               <img 
-                src="/shujaat-logo.png" 
+                src={SHUJAAT_LOGO_URL} 
                 alt="Shujaat Designs" 
                 className="w-8 h-8 rounded-lg object-contain bg-slate-950 p-0.5 border border-slate-700" 
               />

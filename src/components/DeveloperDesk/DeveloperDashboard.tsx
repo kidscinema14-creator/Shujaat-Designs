@@ -21,6 +21,7 @@ import { DemoProject, WebsiteSettings } from '../../types';
 import { seedInitialDataIfEmpty, saveSettings, saveProject } from '../../services/dbService';
 import { getFirebaseStatus } from '../../lib/firebase';
 import { changePassword, logoutUser } from '../../services/authService';
+import { SHUJAAT_LOGO_URL } from '../../assets/logo';
 
 interface DeveloperDashboardProps {
   projects: DemoProject[];
@@ -200,7 +201,7 @@ export const DeveloperDashboard: React.FC<DeveloperDashboardProps> = ({
         <div className="p-5 border-b border-slate-200 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="/shujaat-logo.png" 
+              src={SHUJAAT_LOGO_URL} 
               alt="Shujaat Designs" 
               className="w-10 h-10 rounded-xl object-contain border border-slate-200 bg-slate-950 p-0.5 shadow-xs" 
             />

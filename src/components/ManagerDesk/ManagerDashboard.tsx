@@ -46,6 +46,7 @@ import {
   saveSettings 
 } from '../../services/dbService';
 import { changePassword, logoutUser } from '../../services/authService';
+import { SHUJAAT_LOGO_URL } from '../../assets/logo';
 import { ProjectEditorModal } from './ProjectEditorModal';
 import { ServiceEditorModal } from './ServiceEditorModal';
 import { TestimonialEditorModal } from './TestimonialEditorModal';
@@ -245,7 +246,7 @@ export const ManagerDashboard: React.FC<ManagerDashboardProps> = ({
         <div className="p-5 border-b border-slate-200 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="/shujaat-logo.png" 
+              src={SHUJAAT_LOGO_URL} 
               alt="Shujaat Designs" 
               className="w-10 h-10 rounded-xl object-contain border border-slate-200 bg-slate-950 p-0.5 shadow-xs" 
             />

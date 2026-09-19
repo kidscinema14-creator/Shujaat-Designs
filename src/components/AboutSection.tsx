@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { WebsiteSettings } from '../types';
 import { createWhatsAppLink, getGeneralWhatsAppMessage } from '../utils/whatsapp';
+import { SHUJAAT_LOGO_URL } from '../assets/logo';
 
 interface AboutSectionProps {
   settings: WebsiteSettings;
@@ -106,7 +107,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ settings }) => {
               <div className="flex items-center justify-between pb-4 border-b border-slate-200">
                 <div className="flex items-center gap-2.5">
                   <img 
-                    src="/shujaat-logo.png" 
+                    src={SHUJAAT_LOGO_URL} 
                     alt="Shujaat Designs" 
                     className="w-7 h-7 rounded-md object-contain bg-slate-950 p-0.5" 
                   />
