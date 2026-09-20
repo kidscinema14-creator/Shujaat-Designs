@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { 
   Menu, 
   X, 
-  Sparkles, 
   MessageCircle, 
   ChevronRight, 
   Globe 
@@ -66,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ settings, onOpenInquiry, onNavig
             <img 
               src={SHUJAAT_LOGO_URL} 
               alt={`${settings.businessName} Logo`}
-              className="w-11 h-11 rounded-xl object-contain shadow-sm border border-slate-200 bg-slate-950 p-0.5 group-hover:scale-105 transition-transform duration-200"
+              className="w-11 h-11 rounded-xl object-contain shadow-sm border border-slate-200 bg-white p-1 group-hover:scale-105 transition-transform duration-200"
             />
             <div>
               <span className="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1.5">
