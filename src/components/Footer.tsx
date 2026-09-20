@@ -1,13 +1,11 @@
 import React from 'react';
 import { 
-  Sparkles, 
   MessageCircle, 
   Phone, 
   Mail, 
   MapPin, 
   Shield, 
-  Terminal, 
-  ExternalLink 
+  Terminal 
 } from 'lucide-react';
 import { WebsiteSettings } from '../types';
 import { createWhatsAppLink, getGeneralWhatsAppMessage } from '../utils/whatsapp';
@@ -44,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({
               <img 
                 src={SHUJAAT_LOGO_URL} 
                 alt="Shujaat Designs" 
-                className="w-8 h-8 rounded-lg object-contain bg-slate-950 p-0.5 border border-slate-700" 
+                className="w-10 h-10 rounded-xl object-contain bg-white p-1 border border-slate-700 shadow-sm group-hover:scale-105 transition-transform duration-200" 
               />
               <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
                 {settings.businessName}
