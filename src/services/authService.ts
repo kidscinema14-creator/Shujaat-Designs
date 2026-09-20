@@ -29,8 +29,8 @@ function getLocalCreds() {
     if (raw) return JSON.parse(raw);
   } catch {}
   return {
-    managerHash: btoa('shujaat2026!'),
-    devHash: btoa('devdesk2026!')
+    managerHash: btoa('Yazehra@ali1'),
+    devHash: btoa('Yazehra@ali1')
   };
 }
 
